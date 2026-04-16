@@ -6,10 +6,10 @@ const AboutSection = () => {
       <div className="max-w-4xl mx-auto">
         <AnimateIn>
           <span className="section-label">About</span>
-          <h2 className="section-title mb-12">Strategy meets execution</h2>
+          <h2 className="section-title mb-8">Strategy meets execution</h2>
         </AnimateIn>
 
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-0">
           <AnimateIn delay={0.1}>
             <div className="space-y-5 text-muted-foreground leading-relaxed text-[15px]">
               <p>

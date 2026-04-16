@@ -37,13 +37,13 @@ const ProjectsSection = () => {
       <div className="max-w-4xl mx-auto">
         <AnimateIn>
           <span className="section-label">Projects</span>
-          <h2 className="section-title mb-16">Strategic thinking in action</h2>
+          <h2 className="section-title mb-8">Strategic thinking in action</h2>
         </AnimateIn>
 
         <div className="space-y-0 divide-y divide-border">
           {projects.map((project, i) => (
             <AnimateIn key={i} delay={i * 0.08}>
-              <div className="py-10 first:pt-0">
+              <div className="py-8 first:pt-0">
                 <h3 className="text-xl font-bold text-foreground mb-5">{project.title}</h3>
                 <div className="grid sm:grid-cols-3 gap-6 text-sm text-muted-foreground leading-relaxed mb-5">
                   <div>
@@ -73,7 +73,7 @@ const ProjectsSection = () => {
         </div>
 
         <AnimateIn delay={0.3}>
-          <div className="text-center mt-12">
+          <div className="text-center mt-8">
             <a
               href="https://quirkyness.super.site"
               target="_blank"

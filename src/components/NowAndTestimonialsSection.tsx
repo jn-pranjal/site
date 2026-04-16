@@ -25,7 +25,7 @@ const NowAndTestimonialsSection = () => {
     <section className="section-padding border-t border-border">
       <div className="max-w-4xl mx-auto">
         {/* Now */}
-        <div className="mb-20">
+        <div className="mb-12">
           <AnimateIn>
             <span className="section-label">Now</span>
             <h2 className="section-title mb-8">What I'm up to</h2>
@@ -46,7 +46,7 @@ const NowAndTestimonialsSection = () => {
         <div>
           <AnimateIn>
             <span className="section-label">Testimonials</span>
-            <h2 className="section-title mb-12">Kind words</h2>
+            <h2 className="section-title mb-8">Kind words</h2>
           </AnimateIn>
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((t, i) => (

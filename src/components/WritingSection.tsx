@@ -25,7 +25,7 @@ const WritingSection = () => {
       <div className="max-w-4xl mx-auto">
         <AnimateIn>
           <span className="section-label">Writing</span>
-          <h2 className="section-title mb-12">Ideas & reflections</h2>
+          <h2 className="section-title mb-8">Ideas & reflections</h2>
         </AnimateIn>
 
         <div className="space-y-0 divide-y divide-border">
@@ -49,7 +49,7 @@ const WritingSection = () => {
         </div>
 
         <AnimateIn delay={0.2}>
-          <div className="mt-10">
+          <div className="mt-6">
             <a
               href="https://substack.com/@quirkyness22"
               target="_blank"

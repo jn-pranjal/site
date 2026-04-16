@@ -3,7 +3,7 @@ import profileImg from "@/assets/profile.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center section-padding pt-32">
+    <section className="flex items-center justify-center section-padding pt-28 pb-12 min-h-[85vh]">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -33,7 +33,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-[1.05] font-bold tracking-tight"
+          className="text-4xl md:text-6xl lg:text-7xl text-foreground mb-5 leading-[1.05] font-bold tracking-tight"
         >
           Pranjal Jain
         </motion.h1>
@@ -42,7 +42,7 @@ const HeroSection = () => {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="w-16 h-px bg-foreground mx-auto mb-8"
+          className="w-16 h-px bg-foreground mx-auto mb-6"
         />
 
         <motion.p
@@ -58,7 +58,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="text-sm text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
+          className="text-sm text-muted-foreground max-w-xl mx-auto mb-8 leading-relaxed"
         >
           Strategy & Operations professional with 5+ years across product consulting,
           CEO's office, and enterprise PMO — spanning healthtech, telecom, and global financial services.
@@ -68,7 +68,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-12"
+          className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-8"
         >
           Built systems for 9,000+ employees at Morgan Stanley &nbsp;|&nbsp; Drove 25% efficiency gains at a Series-B healthtech startup
         </motion.p>
