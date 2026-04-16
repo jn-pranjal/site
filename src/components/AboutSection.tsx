@@ -13,11 +13,11 @@ const AboutSection = () => {
           <AnimateIn delay={0.1}>
             <div className="space-y-5 text-muted-foreground leading-relaxed text-[15px]">
               <p>
-                I started in architecture school — which taught me how to think in systems.
+                She started in architecture school — which taught her how to think in systems.
                 How constraints breed creativity. That lens has shaped every role since.
               </p>
               <p>
-                Over 5+ years, I've gone from a 0→1 eSIM product at a telecom startup,
+                Over 5+ years, she's gone from a 0→1 eSIM product at a telecom startup,
                 to the CEO's office at a Series-B healthtech company, to managing enterprise
                 PMO for 9,000+ employees at Morgan Stanley.
               </p>
