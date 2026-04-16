@@ -25,7 +25,7 @@ const HeroSection = () => {
             className="mb-8"
           >
             <span className="inline-flex items-center gap-2 border border-border px-4 py-1.5 rounded-full text-xs tracking-wide text-muted-foreground">
-              <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "hsl(142, 71%, 45%)" }} />
               Open to full-time roles · Available May 2026 · Mumbai · Open to relocation
             </span>
           </motion.div>
