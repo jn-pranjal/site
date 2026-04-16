@@ -57,24 +57,13 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-4 leading-relaxed font-light"
+                className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 leading-relaxed font-light"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                Strategy professional and systems thinker with 4.5+ years of experience across data, space, and growth.
-                I work at the intersection of business and technology, using AI not as a feature but as a thinking layer
-                to pressure-test assumptions, accelerate decisions, and design processes that actually scale.
-              </motion.p>
-
-              <motion.p
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-base text-muted-foreground/80 max-w-2xl mb-8 leading-relaxed font-light"
-                style={{ fontFamily: "'Inter', sans-serif" }}
-              >
-                Whether I'm structuring ambiguity for a C-suite or building dashboards that drive action, I bring
-                first-principles thinking to every problem. I bring clarity, structure, and execution at scale, from
-                Series-A startups to global enterprises. Strategy, operations, and growth, owned end-to-end.
+                Growth and Strategy generalist with an architect's instinct for systems. Experience ranges from
+                automating workflows for 9,000+ employees at Morgan Stanley to driving 25% efficiency gains at a
+                Series-B healthtech startup. I bring structure to ambiguity, own outcomes end to end, and help
+                leadership teams operate with clarity.
               </motion.p>
 
               <motion.div
