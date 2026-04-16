@@ -38,7 +38,7 @@ const HeroSection = () => {
               transition={{ duration: 0.4, delay: 0.2 }}
               className="text-base md:text-lg text-muted-foreground max-w-lg mb-3 leading-relaxed font-light"
             >
-              She brings clarity, structure, and execution to scale — whether it's a Series-A startup or a global enterprise, across strategy, operations, and growth.
+              I bring clarity, structure, and execution to scale — whether it's a Series-A startup or a global enterprise, across strategy, operations, and growth.
             </motion.p>
 
             <motion.p
