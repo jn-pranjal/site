@@ -53,18 +53,23 @@ const HeroSection = () => {
                 Pranjal Jain
               </motion.h1>
 
-              <motion.p
+              <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.25 }}
-                className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 leading-relaxed font-light"
+                transition={{ duration: 0.7, delay: 0.25 }}
+                className="max-w-xl mb-10 space-y-3"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                Growth and Strategy generalist with an architect's instinct for systems. Experience ranges from
-                automating workflows for 9,000+ employees at Morgan Stanley to driving 25% efficiency gains at a
-                Series-B healthtech startup. I bring structure to ambiguity, own outcomes end to end, and help
-                leadership teams operate with clarity.
-              </motion.p>
+                <p className="text-sm md:text-base text-muted-foreground font-light leading-[1.65]">
+                  Growth and Strategy generalist with strong systems thinking.
+                </p>
+                <p className="text-sm md:text-base text-muted-foreground font-light leading-[1.65]">
+                  Scaled workflows for 9,000+ employees at Morgan Stanley and drove 25% efficiency gains at a Series-B startup.
+                </p>
+                <p className="text-sm md:text-base text-muted-foreground font-light leading-[1.65]">
+                  I bring structure to ambiguity and drive outcomes end to end.
+                </p>
+              </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
