@@ -14,7 +14,7 @@ const HeroSection = () => {
     <section className="min-h-screen flex flex-col justify-center relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 to-background pointer-events-none" />
 
-      <div className="relative z-10 px-6 md:px-16 lg:px-24 pt-28 pb-12">
+      <div className="relative z-10 px-6 md:px-16 lg:px-24 pt-24 pb-10">
         <div className="max-w-7xl mx-auto">
           {/* Status badge */}
           <motion.div
