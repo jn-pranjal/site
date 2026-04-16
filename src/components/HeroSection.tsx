@@ -120,7 +120,7 @@ const HeroSection = () => {
                 <img
                   src={profileImg}
                   alt="Pranjal Jain"
-                  className="w-64 h-72 object-cover rounded-sm transition-all duration-700"
+                  className="w-64 h-72 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700 ease-out"
                 />
                 <div className="absolute inset-0 border border-foreground/10 rounded-sm" />
               </div>
