@@ -71,25 +71,6 @@ const AboutSection = () => {
               </p>
             ))}
           </motion.div>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {strengths.map((s, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="border border-border p-6 hover:border-foreground/20 transition-colors group"
-              >
-                <h3 className="text-foreground text-lg mb-2 group-hover:text-accent transition-colors">{s.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
-                  {s.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
