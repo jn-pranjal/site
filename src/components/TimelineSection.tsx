@@ -101,18 +101,18 @@ const TimelineSection = () => {
                     @ {item.company}
                   </p>
 
-                  <ul className="grid sm:grid-cols-2 gap-x-8 gap-y-3">
+                  <ul className="flex flex-col gap-2.5 max-w-2xl">
                     {item.highlights.map((h, j) => (
                       <motion.li
                         key={j}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: 0.2 + j * 0.08 }}
-                        className="flex gap-3 text-sm text-muted-foreground leading-relaxed"
+                        transition={{ duration: 0.4, delay: 0.2 + j * 0.06 }}
+                        className="flex gap-3 text-[13px] md:text-[13.5px] text-muted-foreground leading-relaxed"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        <span className="text-foreground/25 mt-0.5 shrink-0">·</span>
+                        <span className="mt-2 shrink-0 w-1 h-1 rounded-full bg-foreground/40" />
                         <span>{h}</span>
                       </motion.li>
                     ))}
