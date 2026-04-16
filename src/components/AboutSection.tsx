@@ -28,22 +28,49 @@ const AboutSection = () => {
           >
             <span className="section-label">About</span>
             <h2 className="section-title mb-6">Strategy meets execution</h2>
-            <ul className="space-y-3 mb-12 max-w-3xl">
-              {bullets.map((b, i) => (
-                <motion.li
-                  key={i}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.06 }}
-                  className="flex gap-3 text-muted-foreground text-base md:text-[17px] leading-relaxed"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  <span className="text-foreground/30 mt-1.5 shrink-0">·</span>
-                  <span>{b}</span>
-                </motion.li>
-              ))}
-            </ul>
+            <p
+              className="text-muted-foreground text-base md:text-[17px] leading-relaxed max-w-3xl mb-12"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              {intro}
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {strengths.map((s, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="border border-border p-6 hover:border-foreground/20 transition-colors group"
+              >
+                <h3 className="text-foreground text-lg mb-2 group-hover:text-accent transition-colors">{s.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
+                  {s.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6 }}
+            className="space-y-5 max-w-3xl"
+          >
+            {closing.map((p, i) => (
+              <p
+                key={i}
+                className="text-muted-foreground text-base md:text-[17px] leading-relaxed"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                {p}
+              </p>
+            ))}
+          </motion.div>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
