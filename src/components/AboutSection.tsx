@@ -7,13 +7,12 @@ const strengths = [
   { title: "0 to 1 & Scale", desc: "Building from scratch and scaling across geographies and teams" },
 ];
 
-const bullets = [
-  "Growth and Strategy generalist with strong systems thinking",
-  "Experience across enterprise and startup environments",
-  "Scaled workflows for 9,000+ employees at Morgan Stanley",
-  "Drove 25% efficiency gains at a Series-B healthtech startup",
-  "Known for bringing structure to ambiguity and driving outcomes end to end",
-  "Work closely with leadership teams to improve clarity and execution",
+const intro =
+  "A generalist who started in architecture school, learning to think in systems where constraints breed creativity. Over 4.5+ years, she has moved from a 0 to 1 eSIM product at a startup, to the CEO's office at a Series-B healthtech, to consulting at Morgan Stanley in global financial services.";
+
+const closing = [
+  "What stays constant: structured, data-driven, high-ownership. She is most useful when things are ambiguous, cross-functional, and high-stakes. She thinks in systems, communicates with clarity, and executes with urgency.",
+  "She's the person founders and CXOs bring in when they need someone to hold the strategic vision and make it operational, whether that's a 10-person startup or a Fortune 500 enterprise.",
 ];
 
 const AboutSection = () => {
@@ -29,25 +28,15 @@ const AboutSection = () => {
           >
             <span className="section-label">About</span>
             <h2 className="section-title mb-6">Strategy meets execution</h2>
-            <ul className="space-y-3 mb-12 max-w-3xl">
-              {bullets.map((b, i) => (
-                <motion.li
-                  key={i}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.06 }}
-                  className="flex gap-3 text-muted-foreground text-base md:text-[17px] leading-relaxed"
-                  style={{ fontFamily: "'Inter', sans-serif" }}
-                >
-                  <span className="text-foreground/30 mt-1.5 shrink-0">·</span>
-                  <span>{b}</span>
-                </motion.li>
-              ))}
-            </ul>
+            <p
+              className="text-muted-foreground text-base md:text-[17px] leading-relaxed max-w-3xl mb-12"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              {intro}
+            </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {strengths.map((s, i) => (
               <motion.div
                 key={i}
@@ -64,6 +53,24 @@ const AboutSection = () => {
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6 }}
+            className="space-y-5 max-w-3xl"
+          >
+            {closing.map((p, i) => (
+              <p
+                key={i}
+                className="text-muted-foreground text-base md:text-[17px] leading-relaxed"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                {p}
+              </p>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
