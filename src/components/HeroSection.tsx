@@ -24,7 +24,10 @@ const HeroSection = () => {
             className="mb-8"
           >
             <span className="inline-flex items-center gap-2 border border-border px-4 py-1.5 rounded-full text-xs tracking-wide text-muted-foreground">
-              <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "hsl(142, 71%, 45%)" }} />
+              <span
+                className="w-1.5 h-1.5 rounded-full animate-pulse"
+                style={{ backgroundColor: "hsl(142, 71%, 45%)" }}
+              />
               Open to full-time roles · Available May 2026 · Mumbai · Open to relocation
             </span>
           </motion.div>
@@ -57,7 +60,9 @@ const HeroSection = () => {
                 className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-4 leading-relaxed font-light"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                Strategy professional and systems thinker with 4.5+ years of experience across data, space, and growth. I work at the intersection of business and technology, using AI not as a feature but as a thinking layer to pressure-test assumptions, accelerate decisions, and design processes that actually scale.
+                Strategy professional and systems thinker with 4.5+ years of experience across data, space, and growth.
+                I work at the intersection of business and technology, using AI not as a feature but as a thinking layer
+                to pressure-test assumptions, accelerate decisions, and design processes that actually scale.
               </motion.p>
 
               <motion.p
@@ -67,7 +72,9 @@ const HeroSection = () => {
                 className="text-base text-muted-foreground/80 max-w-2xl mb-8 leading-relaxed font-light"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                Whether I'm structuring ambiguity for a C-suite or building dashboards that drive action, I bring first-principles thinking to every problem. I bring clarity, structure, and execution at scale, from Series-A startups to global enterprises. Strategy, operations, and growth, owned end-to-end.
+                Whether I'm structuring ambiguity for a C-suite or building dashboards that drive action, I bring
+                first-principles thinking to every problem. I bring clarity, structure, and execution at scale, from
+                Series-A startups to global enterprises. Strategy, operations, and growth, owned end-to-end.
               </motion.p>
 
               <motion.div
@@ -113,7 +120,7 @@ const HeroSection = () => {
                 <img
                   src={profileImg}
                   alt="Pranjal Jain"
-                  className="w-64 h-72 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-64 h-72 object-cover rounded-sm transition-all duration-700"
                 />
                 <div className="absolute inset-0 border border-foreground/10 rounded-sm" />
               </div>
@@ -142,7 +149,10 @@ const HeroSection = () => {
                 <p className="text-3xl md:text-4xl font-semibold text-foreground tracking-tight leading-none mb-1">
                   {m.value}
                 </p>
-                <p className="text-[11px] text-muted-foreground tracking-wide uppercase" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <p
+                  className="text-[11px] text-muted-foreground tracking-wide uppercase"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
                   {m.label}
                 </p>
               </motion.div>
