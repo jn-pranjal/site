@@ -20,7 +20,7 @@ const HeroSection = () => {
               transition={{ duration: 0.4 }}
               className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3"
             >
-              Chief of Staff &nbsp;·&nbsp; Startup Strategist &nbsp;·&nbsp; Operator
+              Chief of Staff &nbsp;·&nbsp; Work Generalist &nbsp;·&nbsp; Growth Strategist
             </motion.p>
 
             <motion.h1
@@ -38,7 +38,7 @@ const HeroSection = () => {
               transition={{ duration: 0.4, delay: 0.2 }}
               className="text-base md:text-lg text-muted-foreground max-w-lg mb-3 leading-relaxed font-light"
             >
-              I help founders bring clarity, structure, and execution to scale — across strategy, operations, and growth.
+              She brings clarity, structure, and execution to scale — whether it's a Series-A startup or a global enterprise, across strategy, operations, and growth.
             </motion.p>
 
             <motion.p

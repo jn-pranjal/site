@@ -26,13 +26,13 @@ const AboutSection = () => {
           <AnimateIn delay={0.2}>
             <div className="space-y-5 text-muted-foreground leading-relaxed text-[15px]">
               <p>
-                What stays constant: structured, data-driven, high-ownership. I'm most useful
+                What stays constant: structured, data-driven, high-ownership. She's most useful
                 when things are ambiguous, cross-functional, and high-stakes.
               </p>
               <p>
-                I think in systems, communicate with clarity, and execute with urgency.
-                I'm the person founders bring in when they need someone to hold the
-                strategic vision and make her operational.
+                She thinks in systems, communicates with clarity, and executes with urgency.
+                She's the person founders and CXOs bring in when they need someone to hold the
+                strategic vision and make it operational.
               </p>
             </div>
           </AnimateIn>
