@@ -21,21 +21,20 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+        scrolled ? "bg-background/90 backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 md:px-12 py-4">
-        <a href="#" className="font-heading text-xl text-foreground tracking-tight">
+        <a href="#" className="text-foreground font-bold text-lg tracking-tight">
           PJ
         </a>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors duration-200"
             >
               {item.label}
             </a>
@@ -44,13 +43,12 @@ const Navbar = () => {
             href="https://www.canva.com/design/DAGxVwMYY64/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm uppercase tracking-[0.15em] bg-foreground text-primary-foreground px-4 py-2 hover:opacity-90 transition-opacity"
+            className="text-xs uppercase tracking-[0.15em] bg-foreground text-primary-foreground px-4 py-2 hover:opacity-80 transition-opacity"
           >
             Resume
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-foreground"
@@ -64,7 +62,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-t border-border px-6 py-6 space-y-4">
           {navItems.map((item) => (
@@ -72,7 +69,7 @@ const Navbar = () => {
               key={item.href}
               href={item.href}
               onClick={() => setMobileOpen(false)}
-              className="block text-sm uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground"
+              className="block text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground"
             >
               {item.label}
             </a>
@@ -81,7 +78,7 @@ const Navbar = () => {
             href="https://www.canva.com/design/DAGxVwMYY64/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-sm uppercase tracking-[0.15em] bg-foreground text-primary-foreground px-4 py-2"
+            className="inline-block text-xs uppercase tracking-[0.15em] bg-foreground text-primary-foreground px-4 py-2"
           >
             Resume
           </a>
