@@ -5,8 +5,8 @@ const timeline = [
   {
     role: "Consultant, PMO & Automation",
     company: "Morgan Stanley",
-    period: "2024 – Present",
-    type: "Enterprise",
+    period: "Dec 2025 – May 2026",
+    type: "Global Financial Services",
     highlights: [
       "Managed space strategy for 9,000+ employees across 28+ floors",
       "Built executive dashboards across 10+ global locations for real-time decision-making",
@@ -17,7 +17,7 @@ const timeline = [
   {
     role: "Chief of Staff, CEO's Office",
     company: "Remidio",
-    period: "2023 – 2024",
+    period: "Jan 2025 – Dec 2025",
     type: "Series B Healthtech",
     highlights: [
       "Built dashboards improving decision-making speed by 30%",
@@ -29,10 +29,10 @@ const timeline = [
   {
     role: "Product Consultant",
     company: "Tarento",
-    period: "2021 – 2023",
-    type: "Telecom Startup",
+    period: "June 2023 – July 2024",
+    type: "Startup Consulting",
     highlights: [
-      "Led 0→1 eSIM product launch → 10K+ users in first quarter",
+      "Led 0 to 1 eSIM product launch, 10K+ users in first quarter",
       "Accelerated product launch by 3 months via cross-functional execution",
       "Improved onboarding completion by 20% through UX optimization",
     ],
@@ -111,7 +111,7 @@ const TimelineSection = () => {
                         className="flex gap-3 text-sm text-muted-foreground leading-relaxed"
                         style={{ fontFamily: "'Inter', sans-serif" }}
                       >
-                        <span className="text-foreground/25 mt-0.5 shrink-0">—</span>
+                        <span className="text-foreground/25 mt-0.5 shrink-0">·</span>
                         <span>{h}</span>
                       </motion.li>
                     ))}

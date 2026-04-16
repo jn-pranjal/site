@@ -4,7 +4,7 @@ const strengths = [
   { title: "Strategic Thinking", desc: "Systems-level reasoning from architecture to business strategy" },
   { title: "Data-Driven Execution", desc: "Dashboards, KPIs, and analytics that drive real decisions" },
   { title: "Cross-Functional Leadership", desc: "Aligning product, engineering, sales, and ops toward outcomes" },
-  { title: "0→1 & Scale", desc: "Building from scratch and scaling across geographies and teams" },
+  { title: "0 to 1 & Scale", desc: "Building from scratch and scaling across geographies and teams" },
 ];
 
 const AboutSection = () => {
@@ -21,9 +21,9 @@ const AboutSection = () => {
             <span className="section-label">About</span>
             <h2 className="section-title mb-3">Strategy meets execution</h2>
             <p className="text-muted-foreground text-base md:text-lg max-w-3xl leading-relaxed mb-12" style={{ fontFamily: "'Inter', sans-serif" }}>
-              A generalist who started in architecture school — learning to think in systems, 
-              where constraints breed creativity. Over 5+ years, she has moved from a 0→1 eSIM product at a telecom startup, 
-              to the CEO's office at a Series-B healthtech, to managing enterprise PMO for 9,000+ employees at Morgan Stanley.
+              A generalist who started in architecture school, learning to think in systems 
+              where constraints breed creativity. Over 4.5+ years, she has moved from a 0 to 1 eSIM product at a startup, 
+              to the CEO's office at a Series-B healthtech, to consulting at Morgan Stanley in global financial services.
             </p>
           </motion.div>
 
@@ -60,7 +60,7 @@ const AboutSection = () => {
               </p>
               <p className="text-muted-foreground text-[15px] leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
                 She's the person founders and CXOs bring in when they need someone to hold the 
-                strategic vision and make it operational — whether that's a 10-person startup 
+                strategic vision and make it operational, whether that's a 10-person startup 
                 or a Fortune 500 enterprise.
               </p>
             </div>

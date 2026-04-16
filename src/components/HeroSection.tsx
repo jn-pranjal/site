@@ -4,7 +4,7 @@ import profileImg from "@/assets/profile.jpg";
 const metrics = [
   { value: "9,000+", label: "Employees Managed" },
   { value: "25%", label: "Sales Efficiency ↑" },
-  { value: "10K+", label: "Users (0→1 Launch)" },
+  { value: "10K+", label: "Users (0 to 1 Launch)" },
   { value: "30%", label: "Faster Decisions" },
   { value: "15%", label: "Cost Savings" },
 ];
@@ -12,7 +12,6 @@ const metrics = [
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center relative overflow-hidden">
-      {/* Background subtle gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 to-background pointer-events-none" />
 
       <div className="relative z-10 px-6 md:px-16 lg:px-24 pt-28 pb-12">
@@ -39,7 +38,7 @@ const HeroSection = () => {
                 className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4 font-medium"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                Chief of Staff · Growth Strategist · Work Generalist
+                Chief of Staff · Work Generalist · Growth Strategist
               </motion.p>
 
               <motion.h1
@@ -55,11 +54,20 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.25 }}
-                className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 leading-relaxed font-light"
+                className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-4 leading-relaxed font-light"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                I bring clarity, structure, and execution to scale — from Series-A startups to global enterprises. 
-                Strategy, operations, and growth — owned end-to-end.
+                Strategy professional and systems thinker with 4.5+ years of experience across data, space, and growth. I work at the intersection of business and technology, using AI not as a feature but as a thinking layer to pressure-test assumptions, accelerate decisions, and design processes that actually scale.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-base text-muted-foreground/80 max-w-2xl mb-8 leading-relaxed font-light"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Whether I'm structuring ambiguity for a C-suite or building dashboards that drive action, I bring first-principles thinking to every problem. I bring clarity, structure, and execution at scale, from Series-A startups to global enterprises. Strategy, operations, and growth, owned end-to-end.
               </motion.p>
 
               <motion.div

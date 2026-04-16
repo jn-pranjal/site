@@ -7,7 +7,7 @@ const testimonials = [
     role: "Series B Healthtech",
   },
   {
-    quote: "Structured, data-driven, and always three steps ahead. Pranjal made our cross-functional chaos feel manageable — and then made it work.",
+    quote: "Structured, data-driven, and always three steps ahead. Pranjal made our cross-functional chaos feel manageable and then made it work.",
     name: "Engineering Director",
     role: "Enterprise Technology",
   },

@@ -1,20 +1,26 @@
 import { motion } from "framer-motion";
 
 const leadership = [
-  { role: "Joint Secretary", org: "Rotaract Club", year: "2020–2021" },
-  { role: "President", org: "Interact Club", year: "2014–2015" },
-  { role: "Circle Leader", org: "Lean In", year: "2020–2021" },
-  { role: "Volunteer", org: "Kumudben Dwarkadas Vora Industrial Home for Visually Impaired", year: "2023–Present" },
+  { role: "Joint Secretary", org: "Rotaract Club", year: "2020–2021", link: "https://www.rotary.org/en/get-involved/rotaract-clubs" },
+  { role: "President", org: "Interact Club", year: "2014–2015", link: "https://www.rotary.org/en/get-involved/interact-clubs" },
+  { role: "Circle Leader", org: "Lean In", year: "2020–2021", link: "https://leanin.org/" },
+  { role: "Volunteer", org: "Industrial Home for Visually Impaired", year: "2023–Present", link: "https://www.linkedin.com/in/pranjalhjain/" },
 ];
 
 const learning = [
-  { name: "GrowthX", desc: "Advanced Growth & Data-led Strategy" },
-  { name: "McKinsey Forward Program", desc: "Problem-solving & leadership" },
-  { name: "Product Management Fellowship", desc: "NextLeap" },
-  { name: "CSPO", desc: "Scrum Alliance · Valid till Feb 2026" },
+  { name: "GrowthX", desc: "Advanced Growth & Data-led Strategy", link: "https://www.growthx.club/" },
+  { name: "McKinsey Forward Program", desc: "Problem-solving & leadership", link: "https://www.mckinsey.com/forward/overview" },
+  { name: "Product Management Fellowship", desc: "NextLeap", link: "https://www.nextleap.app/" },
+  { name: "CSPO", desc: "Scrum Alliance · Valid till Feb 2026", link: "https://www.scrumalliance.org/get-certified/product-owner-track/certified-scrum-product-owner" },
 ];
 
-const communities = ["Toastmasters", "Leap Club", "GrowthX", "ADPList (500+ mentorship minutes)"];
+const communities = [
+  { name: "Toastmasters", link: "https://www.toastmasters.org/" },
+  { name: "Leap Club", link: "https://www.leapclub.io/" },
+  { name: "GrowthX", link: "https://www.growthx.club/" },
+  { name: "ADPList (500+ mentorship minutes)", link: "https://adplist.org/" },
+];
+
 const languages = ["English", "Hindi", "French", "Marathi", "Marwadi", "Arabic"];
 
 const CredentialsSection = () => {
@@ -33,10 +39,10 @@ const CredentialsSection = () => {
               <span className="section-label">Leadership</span>
               <div className="space-y-4 mt-4">
                 {leadership.map((l, i) => (
-                  <div key={i}>
-                    <p className="text-sm text-foreground font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>{l.role}</p>
+                  <a key={i} href={l.link} target="_blank" rel="noopener noreferrer" className="block group">
+                    <p className="text-sm text-foreground font-medium group-hover:text-accent transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>{l.role}</p>
                     <p className="text-xs text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>{l.org} · {l.year}</p>
-                  </div>
+                  </a>
                 ))}
               </div>
             </motion.div>
@@ -51,10 +57,10 @@ const CredentialsSection = () => {
               <span className="section-label">Continuous Learning</span>
               <div className="space-y-4 mt-4">
                 {learning.map((l, i) => (
-                  <div key={i}>
-                    <p className="text-sm text-foreground font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>{l.name}</p>
+                  <a key={i} href={l.link} target="_blank" rel="noopener noreferrer" className="block group">
+                    <p className="text-sm text-foreground font-medium group-hover:text-accent transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>{l.name}</p>
                     <p className="text-xs text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>{l.desc}</p>
-                  </div>
+                  </a>
                 ))}
               </div>
             </motion.div>
@@ -69,7 +75,9 @@ const CredentialsSection = () => {
               <span className="section-label">Community</span>
               <div className="space-y-3 mt-4">
                 {communities.map((c, i) => (
-                  <p key={i} className="text-sm text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>{c}</p>
+                  <a key={i} href={c.link} target="_blank" rel="noopener noreferrer" className="block text-sm text-muted-foreground hover:text-foreground transition-colors" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    {c.name}
+                  </a>
                 ))}
               </div>
             </motion.div>
