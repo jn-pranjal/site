@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const navItems = [
   { label: "About", href: "#about" },
-  { label: "Work", href: "#work" },
+  { label: "Career", href: "#timeline" },
   { label: "Projects", href: "#projects" },
   { label: "Writing", href: "#writing" },
   { label: "Contact", href: "#contact" },
@@ -21,11 +21,11 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/90 backdrop-blur-md" : "bg-transparent"
+        scrolled ? "bg-background/90 backdrop-blur-md border-b border-border" : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 md:px-12 py-4">
-        <a href="#" className="text-foreground font-bold text-lg tracking-tight">
+      <div className="flex items-center justify-between px-6 md:px-16 lg:px-24 py-4">
+        <a href="#" className="text-foreground font-semibold text-lg tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
           PJ
         </a>
 
@@ -34,7 +34,8 @@ const Navbar = () => {
             <a
               key={item.href}
               href={item.href}
-              className="text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors duration-200"
+              className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors duration-200"
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               {item.label}
             </a>
@@ -43,7 +44,8 @@ const Navbar = () => {
             href="https://www.canva.com/design/DAGxVwMYY64/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs uppercase tracking-[0.15em] bg-foreground text-primary-foreground px-4 py-2 hover:opacity-80 transition-opacity"
+            className="text-[11px] uppercase tracking-[0.2em] bg-foreground text-primary-foreground px-5 py-2 hover:opacity-80 transition-opacity rounded-sm"
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Resume
           </a>
@@ -69,7 +71,8 @@ const Navbar = () => {
               key={item.href}
               href={item.href}
               onClick={() => setMobileOpen(false)}
-              className="block text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground"
+              className="block text-[11px] uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground"
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               {item.label}
             </a>
@@ -78,7 +81,8 @@ const Navbar = () => {
             href="https://www.canva.com/design/DAGxVwMYY64/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block text-xs uppercase tracking-[0.15em] bg-foreground text-primary-foreground px-4 py-2"
+            className="inline-block text-[11px] uppercase tracking-[0.2em] bg-foreground text-primary-foreground px-5 py-2 rounded-sm"
+            style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Resume
           </a>

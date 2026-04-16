@@ -1,8 +1,8 @@
-import AnimateIn from "./AnimateIn";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    quote: "Pranjal brings a rare combination of strategic thinking and execution speed. He's the kind of operator every founder needs in their corner.",
+    quote: "Pranjal brings a rare combination of strategic thinking and execution speed. She's the kind of operator every founder needs in their corner.",
     name: "Startup Founder",
     role: "Series B Healthtech",
   },
@@ -13,54 +13,40 @@ const testimonials = [
   },
 ];
 
-const nowItems = [
-  "Actively looking for full-time roles in Strategy, Operations, or Chief of Staff positions",
-  "Available to join from May 2026",
-  "Currently based in Mumbai",
-  "Open to relocation (Bangalore / other cities)",
-];
-
 const NowAndTestimonialsSection = () => {
   return (
-    <section className="section-padding border-t border-border">
-      <div className="max-w-4xl mx-auto">
-        {/* Now */}
-        <div className="mb-12">
-          <AnimateIn>
-            <span className="section-label">Now</span>
-            <h2 className="section-title mb-8">What I'm up to</h2>
-          </AnimateIn>
-          <AnimateIn delay={0.1}>
-            <ul className="space-y-4">
-              {nowItems.map((item, i) => (
-                <li key={i} className="flex gap-3 text-muted-foreground text-[15px] leading-relaxed">
-                  <span className="text-foreground/30 mt-0.5">—</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </AnimateIn>
-        </div>
-
-        {/* Testimonials */}
-        <div>
-          <AnimateIn>
+    <section className="border-t border-border bg-card/30">
+      <div className="px-6 md:px-16 lg:px-24 py-16 md:py-24">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-12"
+          >
             <span className="section-label">Testimonials</span>
-            <h2 className="section-title mb-8">Kind words</h2>
-          </AnimateIn>
+            <h2 className="section-title">Kind words</h2>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 gap-8">
             {testimonials.map((t, i) => (
-              <AnimateIn key={i} delay={i * 0.1}>
-                <div className="border border-border p-8">
-                  <p className="text-muted-foreground text-[15px] leading-relaxed mb-6 italic">
-                    "{t.quote}"
-                  </p>
-                  <div>
-                    <p className="text-foreground text-sm font-medium">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">{t.role}</p>
-                  </div>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.15 }}
+                className="border border-border p-8 hover:border-foreground/20 transition-colors"
+              >
+                <p className="text-muted-foreground text-base leading-relaxed mb-6 italic" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  "{t.quote}"
+                </p>
+                <div>
+                  <p className="text-foreground text-sm font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>{t.name}</p>
+                  <p className="text-xs text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>{t.role}</p>
                 </div>
-              </AnimateIn>
+              </motion.div>
             ))}
           </div>
         </div>
