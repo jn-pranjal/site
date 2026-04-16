@@ -7,13 +7,12 @@ const strengths = [
   { title: "0 to 1 & Scale", desc: "Building from scratch and scaling across geographies and teams" },
 ];
 
-const bullets = [
-  "Growth and Strategy generalist with strong systems thinking",
-  "Experience across enterprise and startup environments",
-  "Scaled workflows for 9,000+ employees at Morgan Stanley",
-  "Drove 25% efficiency gains at a Series-B healthtech startup",
-  "Known for bringing structure to ambiguity and driving outcomes end to end",
-  "Work closely with leadership teams to improve clarity and execution",
+const intro =
+  "A generalist who started in architecture school, learning to think in systems where constraints breed creativity. Over 4.5+ years, she has moved from a 0 to 1 eSIM product at a startup, to the CEO's office at a Series-B healthtech, to consulting at Morgan Stanley in global financial services.";
+
+const closing = [
+  "What stays constant: structured, data-driven, high-ownership. She is most useful when things are ambiguous, cross-functional, and high-stakes. She thinks in systems, communicates with clarity, and executes with urgency.",
+  "She's the person founders and CXOs bring in when they need someone to hold the strategic vision and make it operational, whether that's a 10-person startup or a Fortune 500 enterprise.",
 ];
 
 const AboutSection = () => {
