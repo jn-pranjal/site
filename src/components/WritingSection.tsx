@@ -8,7 +8,7 @@ const articles = [
     link: "https://quirkyness22.substack.com/p/moving-from-a-city-that-grew-me",
   },
   {
-    title: "What Founders Get Wrong About "Strategy"",
+    title: "What Founders Get Wrong About 'Strategy'",
     link: "#",
   },
   {
