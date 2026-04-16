@@ -125,7 +125,7 @@ const HeroSection = () => {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="relative z-10 border-t border-b border-border bg-card/50"
       >
-        <div className="px-6 md:px-16 lg:px-24 py-8">
+        <div className="px-6 md:px-16 lg:px-24 py-6">
           <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
             {metrics.map((m, i) => (
               <motion.div
