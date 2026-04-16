@@ -2,128 +2,146 @@ import { motion } from "framer-motion";
 import profileImg from "@/assets/profile.jpg";
 
 const metrics = [
-  { value: "9,000+", label: "Employees impacted" },
-  { value: "25%", label: "Efficiency gains" },
-  { value: "10K+", label: "Users acquired (0→1)" },
-  { value: "30%", label: "Faster decisions" },
+  { value: "9,000+", label: "Employees Managed" },
+  { value: "25%", label: "Sales Efficiency ↑" },
+  { value: "10K+", label: "Users (0→1 Launch)" },
+  { value: "30%", label: "Faster Decisions" },
+  { value: "15%", label: "Cost Savings" },
 ];
 
 const HeroSection = () => {
   return (
-    <section className="flex items-center justify-center section-padding pt-24 pb-8 min-h-[85vh]">
-      <div className="max-w-5xl mx-auto w-full">
-        <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center mb-10">
-          <div>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4 }}
-              className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3"
-            >
-              Chief of Staff &nbsp;·&nbsp; Work Generalist &nbsp;·&nbsp; Growth Strategist
-            </motion.p>
+    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden">
+      {/* Background subtle gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 to-background pointer-events-none" />
 
-            <motion.h1
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl text-foreground mb-3 leading-[1.08] font-bold tracking-tight"
-            >
-              Pranjal Jain
-            </motion.h1>
+      <div className="relative z-10 px-6 md:px-16 lg:px-24 pt-28 pb-12">
+        <div className="max-w-7xl mx-auto">
+          {/* Status badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8"
+          >
+            <span className="inline-flex items-center gap-2 border border-border px-4 py-1.5 rounded-full text-xs tracking-wide text-muted-foreground">
+              <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: "hsl(142, 71%, 45%)" }} />
+              Open to full-time roles · Available May 2026 · Mumbai · Open to relocation
+            </span>
+          </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className="text-base md:text-lg text-muted-foreground max-w-lg mb-3 leading-relaxed font-light"
-            >
-              I bring clarity, structure, and execution to scale — whether it's a Series-A startup or a global enterprise, across strategy, operations, and growth.
-            </motion.p>
+          <div className="grid lg:grid-cols-[1fr_300px] gap-12 items-start">
+            <div>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4 font-medium"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                Chief of Staff · Growth Strategist · Work Generalist
+              </motion.p>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, delay: 0.25 }}
-              className="text-xs text-muted-foreground mb-5 tracking-wide"
-            >
-              Open to full-time roles · Available from May 2026 · Mumbai · Open to relocation
-            </motion.p>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-foreground mb-6 leading-[1.05] tracking-tight"
+              >
+                Pranjal Jain
+              </motion.h1>
 
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.25 }}
+                className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8 leading-relaxed font-light"
+                style={{ fontFamily: "'Inter', sans-serif" }}
+              >
+                I bring clarity, structure, and execution to scale — from Series-A startups to global enterprises. 
+                Strategy, operations, and growth — owned end-to-end.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.35 }}
+                className="flex flex-wrap items-center gap-4"
+              >
+                <a
+                  href="#timeline"
+                  className="bg-foreground text-primary-foreground px-8 py-3 text-xs uppercase tracking-[0.2em] hover:opacity-80 transition-opacity rounded-sm"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  View Career Journey
+                </a>
+                <a
+                  href="https://www.canva.com/design/DAGxVwMYY64/view"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-foreground/20 text-foreground px-8 py-3 text-xs uppercase tracking-[0.2em] hover:border-foreground transition-colors rounded-sm"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  Resume
+                </a>
+                <a
+                  href="#contact"
+                  className="text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  Let's Talk
+                </a>
+              </motion.div>
+            </div>
+
+            {/* Profile image */}
             <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              className="flex flex-wrap items-center gap-3"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="hidden lg:flex justify-end"
             >
-              <a
-                href="#work"
-                className="bg-foreground text-primary-foreground px-7 py-2.5 text-xs uppercase tracking-[0.15em] hover:opacity-80 transition-opacity"
-              >
-                View Work
-              </a>
-              <a
-                href="https://www.canva.com/design/DAGxVwMYY64/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-foreground text-foreground px-7 py-2.5 text-xs uppercase tracking-[0.15em] hover:bg-foreground hover:text-primary-foreground transition-colors"
-              >
-                Resume
-              </a>
-              <a
-                href="#contact"
-                className="text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4"
-              >
-                Let's Talk
-              </a>
+              <div className="relative">
+                <img
+                  src={profileImg}
+                  alt="Pranjal Jain"
+                  className="w-64 h-72 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700"
+                />
+                <div className="absolute inset-0 border border-foreground/10 rounded-sm" />
+              </div>
             </motion.div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-            className="hidden md:block"
-          >
-            <img
-              src={profileImg}
-              alt="Pranjal Jain"
-              width={512}
-              height={512}
-              className="w-36 h-36 rounded-full object-cover grayscale"
-            />
-          </motion.div>
         </div>
+      </div>
 
-        {/* Impact metrics strip */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.45 }}
-          className="border-t border-border pt-6"
-        >
-          <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-4">
-            Quantitative Impact
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
+      {/* Full-width metrics bar */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        className="relative z-10 border-t border-b border-border bg-card/50"
+      >
+        <div className="px-6 md:px-16 lg:px-24 py-8">
+          <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-8">
             {metrics.map((m, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.5 + i * 0.08 }}
+                transition={{ duration: 0.4, delay: 0.55 + i * 0.08 }}
+                className="text-center md:text-left"
               >
-                <p className="text-3xl md:text-4xl font-bold text-foreground tracking-tight leading-none mb-1">
+                <p className="text-3xl md:text-4xl font-semibold text-foreground tracking-tight leading-none mb-1">
                   {m.value}
                 </p>
-                <p className="text-xs text-muted-foreground tracking-wide">
+                <p className="text-[11px] text-muted-foreground tracking-wide uppercase" style={{ fontFamily: "'Inter', sans-serif" }}>
                   {m.label}
                 </p>
               </motion.div>
             ))}
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 };
