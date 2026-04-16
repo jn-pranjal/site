@@ -18,12 +18,12 @@ const ContactSection = () => {
         <AnimateIn>
           <span className="section-label">Contact</span>
           <h2 className="section-title mb-4">Let's connect</h2>
-          <p className="text-muted-foreground mb-12 max-w-lg text-[15px] leading-relaxed">
+          <p className="text-muted-foreground mb-8 max-w-lg text-[15px] leading-relaxed">
             Always happy to speak with founders, operators, and investors.
           </p>
         </AnimateIn>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8">
           <AnimateIn delay={0.1}>
             <div className="space-y-6">
               <a

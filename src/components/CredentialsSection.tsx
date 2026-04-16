@@ -23,10 +23,10 @@ const CredentialsSection = () => {
     <section className="section-padding border-t border-border">
       <div className="max-w-4xl mx-auto">
         {/* Positions of Responsibility */}
-        <div className="mb-20">
+        <div className="mb-12">
           <AnimateIn>
             <span className="section-label">Positions of Responsibility</span>
-            <h2 className="section-title mb-12">Leadership & community</h2>
+            <h2 className="section-title mb-8">Leadership & community</h2>
           </AnimateIn>
           <div className="space-y-0 divide-y divide-border">
             {positions.map((p, i) => (
@@ -44,10 +44,10 @@ const CredentialsSection = () => {
         </div>
 
         {/* Certifications */}
-        <div className="mb-20">
+        <div className="mb-12">
           <AnimateIn>
             <span className="section-label">Certifications</span>
-            <h2 className="section-title mb-12">Continuous learning</h2>
+            <h2 className="section-title mb-8">Continuous learning</h2>
           </AnimateIn>
           <div className="space-y-0 divide-y divide-border">
             {certifications.map((c, i) => (
@@ -62,7 +62,7 @@ const CredentialsSection = () => {
         </div>
 
         {/* Mentorship */}
-        <div className="mb-20">
+        <div className="mb-12">
           <AnimateIn>
             <span className="section-label">Mentorship</span>
             <h2 className="section-title mb-8">Active learner</h2>

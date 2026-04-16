@@ -41,10 +41,10 @@ const WorkSection = () => {
       <div className="max-w-4xl mx-auto">
         <AnimateIn>
           <span className="section-label">Experience</span>
-          <h2 className="section-title mb-16">Selected work</h2>
+          <h2 className="section-title mb-10">Selected work</h2>
         </AnimateIn>
 
-        <div className="space-y-16">
+        <div className="space-y-10">
           {experiences.map((exp, i) => (
             <AnimateIn key={i} delay={i * 0.1}>
               <div className="grid md:grid-cols-[200px_1fr] gap-6 md:gap-12">
