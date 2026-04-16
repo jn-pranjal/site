@@ -10,15 +10,15 @@ const metrics = [
 
 const HeroSection = () => {
   return (
-    <section className="flex items-center justify-center section-padding pt-24 pb-10 min-h-[90vh]">
+    <section className="flex items-center justify-center section-padding pt-24 pb-8 min-h-[85vh]">
       <div className="max-w-5xl mx-auto w-full">
-        <div className="grid md:grid-cols-[1fr_auto] gap-10 items-center mb-12">
+        <div className="grid md:grid-cols-[1fr_auto] gap-8 items-center mb-10">
           <div>
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.4 }}
-              className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4"
+              className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3"
             >
               Chief of Staff &nbsp;·&nbsp; Startup Strategist &nbsp;·&nbsp; Operator
             </motion.p>
@@ -27,7 +27,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl text-foreground mb-4 leading-[1.08] font-bold tracking-tight"
+              className="text-4xl md:text-5xl lg:text-6xl text-foreground mb-3 leading-[1.08] font-bold tracking-tight"
             >
               Pranjal Jain
             </motion.h1>
@@ -36,16 +36,25 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
-              className="text-base md:text-lg text-muted-foreground max-w-lg mb-6 leading-relaxed font-light"
+              className="text-base md:text-lg text-muted-foreground max-w-lg mb-3 leading-relaxed font-light"
             >
               I help founders bring clarity, structure, and execution to scale — across strategy, operations, and growth.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.25 }}
+              className="text-xs text-muted-foreground mb-5 tracking-wide"
+            >
+              Open to full-time roles · Available from May 2026 · Mumbai · Open to relocation
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 }}
-              className="flex flex-wrap items-center gap-4"
+              className="flex flex-wrap items-center gap-3"
             >
               <a
                 href="#work"
@@ -91,12 +100,12 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.45 }}
-          className="border-t border-border pt-8"
+          className="border-t border-border pt-6"
         >
-          <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-5">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-4">
             Quantitative Impact
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8">
             {metrics.map((m, i) => (
               <motion.div
                 key={i}

@@ -32,7 +32,7 @@ const AboutSection = () => {
               <p>
                 I think in systems, communicate with clarity, and execute with urgency.
                 I'm the person founders bring in when they need someone to hold the
-                strategic vision and make it operational.
+                strategic vision and make her operational.
               </p>
             </div>
           </AnimateIn>
