@@ -7,7 +7,7 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const mailtoLink = `mailto:ar.pranjaljain@gmail.com?subject=Hey Pranjal — from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
+    const mailtoLink = `mailto:ar.pranjaljain@gmail.com?subject=Hey Pranjal, from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
     window.open(mailtoLink, "_blank");
     setSubmitted(true);
   };

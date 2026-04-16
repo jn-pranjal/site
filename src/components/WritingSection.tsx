@@ -7,7 +7,7 @@ const ideas = [
   "The Real Role of a Chief of Staff",
   "Why Generalists Win in Ambiguity",
   "Data Without Decisions Is Just Noise",
-  "Building in Public: Lessons from 0→1",
+  "Building in Public: Lessons from 0 to 1",
   "The Operator's Edge in Early-Stage Startups",
 ];
 
@@ -39,7 +39,6 @@ const WritingSection = () => {
           </motion.div>
         </div>
 
-        {/* Ticker */}
         <div className="relative">
           <div className="animate-ticker flex whitespace-nowrap">
             {[...ideas, ...ideas].map((idea, i) => (
