@@ -4,37 +4,40 @@ import { useRef } from "react";
 const timeline = [
   {
     role: "Consultant, PMO & Automation",
-    company: "Morgan Stanley",
+    company: "Morgan Stanley, India (via Hays)",
     period: "Dec 2025 – May 2026",
     type: "Global Financial Services",
     highlights: [
-      "Managed space strategy for 9,000+ employees across 28+ floors",
-      "Built executive dashboards across 10+ global locations for real-time decision-making",
-      "Automated workflows reducing manual effort at enterprise scale",
-      "Coordinated 10+ cross-geo teams with zero major escalations",
+      "Managed space strategy for 9,000+ employees across Mumbai and Bengaluru",
+      "Built dashboards across 10+ global locations for leadership visibility",
+      "Coordinated cross-functional teams across NY, Mumbai, and Bengaluru with zero escalations",
+      "Automated workflows using RCA, improving turnaround time at scale",
+      "Led onboarding systems and large-scale event execution with zero disruption",
     ],
   },
   {
     role: "Chief of Staff, CEO's Office",
-    company: "Remidio",
+    company: "Remidio Innovative Solutions, Bengaluru",
     period: "Jan 2025 – Dec 2025",
     type: "Series B Healthtech",
     highlights: [
-      "Built dashboards improving decision-making speed by 30%",
-      "Increased sales efficiency by 25% via CRM and pipeline visibility across 3 BUs",
-      "Drove nationwide programs (1,000+ reps), increasing adoption by 20%",
-      "Delivered 15% cost savings via analytics-led process optimization",
+      "Built executive dashboards for leadership, improving decision speed by 30%",
+      "Led strategic accounts and nationwide deployments, increasing adoption by 20%",
+      "Designed CRM systems across 3 business units, improving sales efficiency by 25%",
+      "Partnered on GTM and growth strategy, improving retention by 20%",
+      "Built and engaged a 250+ doctor community, increasing adoption by 15%",
     ],
   },
   {
-    role: "Product Consultant",
-    company: "Tarento",
-    period: "June 2023 – July 2024",
+    role: "Analyst, Product Consultant",
+    company: "Tarento Technologies, Bengaluru",
+    period: "Jul 2023 – Jul 2024",
     type: "Startup Consulting",
     highlights: [
-      "Led 0 to 1 eSIM product launch, 10K+ users in first quarter",
-      "Accelerated product launch by 3 months via cross-functional execution",
-      "Improved onboarding completion by 20% through UX optimization",
+      "Led 0 to 1 launch of telecom eSIM product with 10K+ users in first quarter",
+      "Accelerated launch by 3 months through cross-functional execution",
+      "Improved onboarding completion by 20% and reduced drop-offs by 15%",
+      "Delivered CXO-level insights, improving KPI performance by 15%",
     ],
   },
 ];
@@ -63,7 +66,6 @@ const TimelineSection = () => {
           </motion.div>
 
           <div className="relative">
-            {/* Animated vertical line */}
             <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-border">
               <motion.div
                 className="w-full bg-foreground/30 origin-top"
@@ -81,7 +83,6 @@ const TimelineSection = () => {
                   transition={{ duration: 0.6, delay: i * 0.15 }}
                   className="relative pl-8 md:pl-20 py-10 group"
                 >
-                  {/* Timeline dot */}
                   <div className="absolute left-0 md:left-8 top-12 -translate-x-[4.5px] w-[10px] h-[10px] rounded-full border-2 border-foreground/40 bg-background group-hover:border-foreground group-hover:bg-foreground/10 transition-colors" />
 
                   <div className="flex flex-wrap items-baseline gap-3 mb-1">
