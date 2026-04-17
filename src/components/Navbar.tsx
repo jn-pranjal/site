@@ -42,13 +42,21 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://www.canva.com/design/DAGxVwMYY64/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[11px] uppercase tracking-[0.2em] bg-foreground text-primary-foreground px-5 py-2 hover:opacity-80 transition-opacity rounded-sm"
+            href="/Pranjal_Jain_Resume.pdf"
+            download
+            className="text-[11px] uppercase tracking-[0.2em] border border-foreground/30 text-foreground px-5 py-2 hover:border-foreground transition-colors rounded-sm"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Resume
+          </a>
+          <a
+            href="https://calendly.com/pranjalhjain/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[11px] uppercase tracking-[0.2em] bg-foreground text-primary-foreground px-5 py-2 hover:scale-[1.03] hover:opacity-95 transition-all rounded-sm"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
+            Book a call →
           </a>
           <ThemeToggle />
         </div>
@@ -83,13 +91,21 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://www.canva.com/design/DAGxVwMYY64/view"
+            href="/Pranjal_Jain_Resume.pdf"
+            download
+            className="inline-block text-[11px] uppercase tracking-[0.2em] border border-foreground/30 text-foreground px-5 py-2 rounded-sm mr-2"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
+            Resume
+          </a>
+          <a
+            href="https://calendly.com/pranjalhjain/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-[11px] uppercase tracking-[0.2em] bg-foreground text-primary-foreground px-5 py-2 rounded-sm"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            Resume
+            Book a call →
           </a>
         </div>
       )}

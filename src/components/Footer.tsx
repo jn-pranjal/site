@@ -16,6 +16,14 @@ const Footer = () => {
           © {new Date().getFullYear()} Pranjal Jain. Mumbai, India.
         </p>
         <div className="flex items-center gap-5">
+          <a
+            href="/Pranjal_Jain_Resume.pdf"
+            download
+            className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground transition-colors"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
+            Download CV
+          </a>
           {socials.map((s, i) => {
             const Icon = s.icon;
             const isExternal = !s.href.startsWith("mailto:");

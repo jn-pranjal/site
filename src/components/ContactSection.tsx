@@ -57,7 +57,7 @@ const ContactSection = () => {
                   <span className="text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>+91 9702727954</span>
                 </a>
                 <a
-                  href="https://calendly.com/pranjaljain_"
+                  href="https://calendly.com/pranjalhjain/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 text-foreground hover:opacity-60 transition-opacity group"
