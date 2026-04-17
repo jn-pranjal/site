@@ -164,8 +164,9 @@ const AITwin = () => {
                   <p className="text-sm text-foreground font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
                     Pranjal's AI Twin
                   </p>
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    Online
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground flex items-center gap-1.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block" />
+                    Online · Trained on Pranjal's work
                   </p>
                 </div>
               </div>
