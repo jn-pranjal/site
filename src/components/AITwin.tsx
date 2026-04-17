@@ -4,13 +4,13 @@ import { MessageCircle, X, Send, Calendar } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { toast } from "sonner";
 
-const CALENDAR_URL = "https://calendly.com/pranjaljain_";
+const CALENDAR_URL = "https://calendly.com/pranjalhjain/30min";
 
 const SUGGESTED = [
   "Tell me about Pranjal",
   "What projects has she worked on?",
   "What impact has she created?",
-  "What makes her different?",
+  "Why should I hire her?",
 ];
 
 type Msg = { role: "user" | "assistant"; content: string };
@@ -22,7 +22,25 @@ const AITwin = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([]);
+  const [showLabel, setShowLabel] = useState(false);
+  const [modalActive, setModalActive] = useState(false);
+  const [recruiterCount] = useState(() => 47 + Math.floor(Math.random() * 18));
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Show idle label bubble after a beat, hide once opened
+  useEffect(() => {
+    const t = setTimeout(() => setShowLabel(true), 1600);
+    return () => clearTimeout(t);
+  }, []);
+
+  // Detect when a project modal is open (body scroll-locked) → reduce prominence
+  useEffect(() => {
+    const check = () => setModalActive(document.body.style.overflow === "hidden" && !open);
+    const observer = new MutationObserver(check);
+    observer.observe(document.body, { attributes: true, attributeFilter: ["style"] });
+    check();
+    return () => observer.disconnect();
+  }, [open]);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
