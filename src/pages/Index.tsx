@@ -8,7 +8,7 @@ import CredentialsSection from "@/components/CredentialsSection";
 import NowAndTestimonialsSection from "@/components/NowAndTestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import AITwin from "@/components/AITwin";
+
 
 const Index = () => {
   return (
