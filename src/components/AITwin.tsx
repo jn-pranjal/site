@@ -218,6 +218,13 @@ const AITwin = () => {
                       </button>
                     ))}
                   </div>
+                  <div className="flex items-center gap-2 pt-2 text-[10px] uppercase tracking-[0.18em] text-muted-foreground/70" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <span className="relative flex w-1.5 h-1.5">
+                      <span className="absolute inline-flex w-full h-full rounded-full bg-emerald-500/60 animate-ping" />
+                      <span className="relative inline-flex w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    </span>
+                    Seen by {recruiterCount} recruiters this week
+                  </div>
                 </div>
               )}
 
