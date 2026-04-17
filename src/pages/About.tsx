@@ -12,10 +12,11 @@ const fadeUp = {
 };
 
 const outsideOffice = [
-  "Meeting new people and learning through conversations.",
-  "Reading about psychology, productivity, and systems thinking.",
-  "Hosting or participating in reflection-led and vision-oriented workshops.",
-  "Travelling solo and staying active through cycling, aerial silk, and surfing.",
+  "Meeting new people and learning through conversations",
+  "Reading about psychology, productivity, and systems thinking",
+  "Hosting or participating in reflection-led and vision-oriented workshops",
+  "Travelling solo",
+  "Staying active through cycling, aerial silk, and surfing",
 ];
 
 const About = () => {
