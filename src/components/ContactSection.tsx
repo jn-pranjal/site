@@ -56,6 +56,15 @@ const ContactSection = () => {
                   <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground w-20" style={{ fontFamily: "'Inter', sans-serif" }}>WhatsApp</span>
                   <span className="text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>+91 9702727954</span>
                 </a>
+                <a
+                  href="https://calendly.com/pranjaljain_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 text-foreground hover:opacity-60 transition-opacity group"
+                >
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground w-20" style={{ fontFamily: "'Inter', sans-serif" }}>Book a call</span>
+                  <span className="text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>30-min sync →</span>
+                </a>
                 <p className="text-[11px] text-muted-foreground/50 pl-24" style={{ fontFamily: "'Inter', sans-serif" }}>
                   Appreciate texting before calling directly :)
                 </p>
