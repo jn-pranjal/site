@@ -23,7 +23,6 @@ const Index = () => {
       <ContactSection />
       <WritingSection />
       <Footer />
-      <AITwin />
     </div>
   );
 };
