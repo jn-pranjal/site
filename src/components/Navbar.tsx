@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -49,8 +50,11 @@ const Navbar = () => {
           >
             Resume
           </a>
+          <ThemeToggle />
         </div>
 
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-foreground"
@@ -62,6 +66,7 @@ const Navbar = () => {
             <span className={`block w-6 h-px bg-foreground transition-transform ${mobileOpen ? "-rotate-45 -translate-y-[3.5px]" : ""}`} />
           </div>
         </button>
+        </div>
       </div>
 
       {mobileOpen && (

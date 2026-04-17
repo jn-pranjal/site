@@ -188,12 +188,13 @@ const ProjectsSection = () => {
               className="fixed inset-0 z-40 bg-black/40 backdrop-blur-[2px]"
             />
 
-            <div className="fixed inset-0 z-50 flex items-center justify-center px-4 md:px-12 pointer-events-none">
+            <div className="fixed inset-0 z-50 overflow-y-auto pointer-events-none">
+              <div className="min-h-full flex items-center justify-center px-4 md:px-12 py-8">
               {/* Prev */}
               <button
                 onClick={prev}
                 aria-label="Previous project"
-                className="hidden md:flex pointer-events-auto absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-background border border-border items-center justify-center text-foreground hover:-translate-x-0.5 hover:border-foreground/40 transition-all"
+                className="hidden md:flex pointer-events-auto fixed left-4 lg:left-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-background border border-border items-center justify-center text-foreground hover:-translate-x-0.5 hover:border-foreground/40 transition-all z-10"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -201,7 +202,7 @@ const ProjectsSection = () => {
               <motion.div
                 key="modal"
                 layoutId={`project-card-${active.category}`}
-                className="pointer-events-auto relative w-full max-w-[800px] md:w-[78vw] bg-card border border-border rounded-sm shadow-2xl overflow-hidden"
+                className="pointer-events-auto relative w-full max-w-[800px] md:w-[78vw] bg-card border border-border rounded-sm shadow-2xl overflow-hidden my-auto"
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
               >
                 <div className="flex items-start justify-between p-6 md:p-8 border-b border-border">
@@ -275,13 +276,13 @@ const ProjectsSection = () => {
               <button
                 onClick={next}
                 aria-label="Next project"
-                className="hidden md:flex pointer-events-auto absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-background border border-border items-center justify-center text-foreground hover:translate-x-0.5 hover:border-foreground/40 transition-all"
+                className="hidden md:flex pointer-events-auto fixed right-4 lg:right-8 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-background border border-border items-center justify-center text-foreground hover:translate-x-0.5 hover:border-foreground/40 transition-all z-10"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
 
               {/* Mobile nav */}
-              <div className="md:hidden pointer-events-auto absolute bottom-6 left-0 right-0 flex items-center justify-center gap-3">
+              <div className="md:hidden pointer-events-auto fixed bottom-6 left-0 right-0 flex items-center justify-center gap-3 z-10">
                 <button
                   onClick={prev}
                   aria-label="Previous"
@@ -296,6 +297,7 @@ const ProjectsSection = () => {
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>
+              </div>
               </div>
             </div>
           </>
