@@ -20,7 +20,7 @@ const closing = [
 const AboutSection = () => {
   return (
     <section id="about" className="bg-card/30">
-      <div className="px-6 md:px-16 lg:px-24 py-14 md:py-20">
+      <div className="px-6 md:px-16 lg:px-24 py-[62px] md:py-[88px]">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -31,14 +31,14 @@ const AboutSection = () => {
             <span className="section-label">About</span>
             <h2 className="section-title mb-6">Strategy meets execution</h2>
             <p
-              className="text-muted-foreground text-base md:text-[17px] leading-relaxed max-w-3xl mb-12"
+              className="text-muted-foreground text-base md:text-[17px] leading-[1.85] max-w-3xl mb-14"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               {intro}
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7 mb-14">
             {strengths.map((s, i) => (
               <motion.div
                 key={i}
@@ -61,12 +61,12 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6 }}
-            className="space-y-5 max-w-3xl"
+            className="space-y-6 max-w-3xl"
           >
             {closing.map((p, i) => (
               <p
                 key={i}
-                className="text-muted-foreground text-base md:text-[17px] leading-relaxed"
+                className="text-muted-foreground text-base md:text-[17px] leading-[1.85]"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 {p}
@@ -79,21 +79,21 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="max-w-3xl mt-12"
+            className="max-w-3xl mt-14"
           >
             <p
-              className="text-foreground/90 text-base md:text-[17px] leading-relaxed italic"
+              className="text-[13px] md:text-[14px] text-muted-foreground/80 leading-snug mt-5 mb-3"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               There's more behind the work than what fits here.
             </p>
             <Link
               to="/about"
-              className="group inline-flex items-center gap-2 mt-7 text-sm uppercase tracking-[0.18em] text-foreground border-b border-foreground/30 pb-1 hover:border-foreground transition-colors"
+              className="group inline-flex items-center gap-2 mt-7 text-sm uppercase tracking-[0.18em] text-foreground border-b border-foreground/30 pb-1 hover:border-foreground hover:opacity-90 transition-all duration-200"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Read my story
-              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 transition-transform duration-200 ease-out group-hover:translate-x-1" />
             </Link>
           </motion.div>
         </div>
