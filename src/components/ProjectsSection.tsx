@@ -32,7 +32,7 @@ const projects: Project[] = [
     overview:
       "Startup needed to launch an eSIM product from scratch in a competitive market.",
     work:
-      "Owned product strategy, GTM, partner integrations, and launch operations end-to-end — from positioning to onboarding flows.",
+      "Owned product strategy, GTM, partner integrations, and launch operations end-to-end, from positioning to onboarding flows.",
     outcome:
       "10K+ users in the first quarter; launch accelerated by 3 months.",
     link: "https://quirkyness.super.site/c6e2595e215a47e2b2cf698028b298e2",
