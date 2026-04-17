@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const strengths = [
   { title: "Strategic Thinking", desc: "Systems-level reasoning from architecture to business strategy" },
@@ -70,6 +72,29 @@ const AboutSection = () => {
                 {p}
               </p>
             ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="max-w-3xl mt-12"
+          >
+            <p
+              className="text-foreground/90 text-base md:text-[17px] leading-relaxed italic"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              There's more behind the work than what fits here.
+            </p>
+            <Link
+              to="/about"
+              className="group inline-flex items-center gap-2 mt-7 text-sm uppercase tracking-[0.18em] text-foreground border-b border-foreground/30 pb-1 hover:border-foreground transition-colors"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Read my story
+              <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
           </motion.div>
         </div>
       </div>
