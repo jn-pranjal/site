@@ -63,7 +63,7 @@ const About = () => {
             className="text-foreground/90 text-lg md:text-xl leading-[1.7] mb-20"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            I've worked across startups and large enterprises, but the common thread has been the same — stepping into ambiguous, high-stakes problems and bringing structure, clarity, and execution.
+            I've worked across startups and large enterprises, but the common thread has been the same stepping into ambiguous, high-stakes problems and bringing structure, clarity, and execution.
           </motion.p>
 
           {/* Who am I */}
@@ -103,7 +103,7 @@ const About = () => {
                 Previously, I've worked in Founder's Office and Product Consulting roles, driving 0→1 initiatives, digital transformation, and growth strategy for startups. From leading product discovery sprints and user research to building pilots for new revenue models and operational systems, my experience spans both fast-moving startup environments and structured consulting frameworks.
               </p>
               <p>
-                I've also co-founded a venture, which gave me hands-on exposure to monetisation, scalability, and the realities of building from scratch — shaping how I approach strategy with pragmatism and execution discipline.
+                I've also co-founded a venture, which gave me hands-on exposure to monetisation, scalability, and the realities of building from scratch shaping how I approach strategy with pragmatism and execution discipline.
               </p>
             </div>
           </motion.section>

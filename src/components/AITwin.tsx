@@ -165,7 +165,7 @@ const AITwin = () => {
               {messages.length === 0 && (
                 <div className="space-y-3">
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Hey — I'm Pranjal's AI Twin. Ask me anything about her work, projects, or approach.
+                    Hey I'm Pranjal's AI Twin. Ask me anything about her work, projects, or approach.
                   </p>
                   <div className="flex flex-col gap-2 pt-1">
                     {SUGGESTED.map((s) => (
