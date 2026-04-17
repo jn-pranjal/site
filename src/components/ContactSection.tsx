@@ -39,6 +39,15 @@ const ContactSection = () => {
                   <span className="text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>ar.pranjaljain@gmail.com</span>
                 </a>
                 <a
+                  href="https://www.linkedin.com/in/pranjalhjain/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 text-foreground hover:opacity-60 transition-opacity group"
+                >
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground w-20" style={{ fontFamily: "'Inter', sans-serif" }}>LinkedIn</span>
+                  <span className="text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>pranjalhjain →</span>
+                </a>
+                <a
                   href="https://wa.me/919702727954"
                   target="_blank"
                   rel="noopener noreferrer"
