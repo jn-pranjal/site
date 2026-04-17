@@ -66,6 +66,7 @@ const Navbar = () => {
             <span className={`block w-6 h-px bg-foreground transition-transform ${mobileOpen ? "-rotate-45 -translate-y-[3.5px]" : ""}`} />
           </div>
         </button>
+        </div>
       </div>
 
       {mobileOpen && (
