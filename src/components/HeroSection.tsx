@@ -41,7 +41,7 @@ const HeroSection = () => {
                 className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4 font-medium"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
-                Chief of Staff · Work Generalist · Growth Strategist
+                Chief of Staff
               </motion.p>
 
               <motion.h1
@@ -61,7 +61,7 @@ const HeroSection = () => {
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 <p className="text-sm md:text-base text-muted-foreground font-light leading-[1.65]">
-                  Growth and Strategy generalist with strong systems thinking.
+                  Growth and Strategy with strong systems thinking.
                 </p>
                 <p className="text-sm md:text-base text-muted-foreground font-light leading-[1.65]">
                   Scaled workflows for 9,000+ employees at Morgan Stanley and drove 25% efficiency gains at a Series-B startup.

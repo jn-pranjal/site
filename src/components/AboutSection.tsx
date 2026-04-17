@@ -10,7 +10,7 @@ const strengths = [
 ];
 
 const intro =
-  "A generalist who started in architecture school, learning to think in systems where constraints breed creativity. Over 4.5+ years, she has moved from a 0 to 1 eSIM product at a startup, to the CEO's office at a Series-B healthtech, to consulting at Morgan Stanley in global financial services.";
+  "Started in architecture school, learning to think in systems where constraints breed creativity. Over 4.5+ years, she has moved from a 0 to 1 eSIM product at a startup, to the CEO's office at a Series-B healthtech, to consulting at Morgan Stanley in global financial services.";
 
 const closing = [
   "What stays constant: structured, data-driven, high-ownership. She is most useful when things are ambiguous, cross-functional, and high-stakes. She thinks in systems, communicates with clarity, and executes with urgency.",
