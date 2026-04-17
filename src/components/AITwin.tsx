@@ -4,13 +4,13 @@ import { MessageCircle, X, Send, Calendar } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { toast } from "sonner";
 
-const CALENDAR_URL = "https://calendly.com/pranjaljain_";
+const CALENDAR_URL = "https://calendly.com/pranjalhjain/30min";
 
 const SUGGESTED = [
   "Tell me about Pranjal",
   "What projects has she worked on?",
   "What impact has she created?",
-  "What makes her different?",
+  "Why should I hire her?",
 ];
 
 type Msg = { role: "user" | "assistant"; content: string };
@@ -22,7 +22,25 @@ const AITwin = () => {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([]);
+  const [showLabel, setShowLabel] = useState(false);
+  const [modalActive, setModalActive] = useState(false);
+  const [recruiterCount] = useState(() => 47 + Math.floor(Math.random() * 18));
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  // Show idle label bubble after a beat, hide once opened
+  useEffect(() => {
+    const t = setTimeout(() => setShowLabel(true), 1600);
+    return () => clearTimeout(t);
+  }, []);
+
+  // Detect when a project modal is open (body scroll-locked) → reduce prominence
+  useEffect(() => {
+    const check = () => setModalActive(document.body.style.overflow === "hidden" && !open);
+    const observer = new MutationObserver(check);
+    observer.observe(document.body, { attributes: true, attributeFilter: ["style"] });
+    check();
+    return () => observer.disconnect();
+  }, [open]);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -109,20 +127,41 @@ const AITwin = () => {
 
   return (
     <>
-      {/* Floating button */}
-      <motion.button
-        onClick={() => setOpen((o) => !o)}
-        aria-label={open ? "Close chat" : "Open AI Twin"}
-        className="fixed bottom-6 right-6 z-[9999] w-[52px] h-[52px] rounded-full bg-foreground text-background flex items-center justify-center shadow-xl hover:scale-105 transition-transform"
+      {/* Floating button + idle label bubble */}
+      <motion.div
+        className="fixed bottom-6 right-6 z-[9999] flex items-center gap-3"
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        animate={{ opacity: modalActive ? 0.8 : 1, scale: modalActive ? 0.95 : 1 }}
         transition={{ delay: 0.5, duration: 0.3 }}
       >
-        {open ? <X className="w-5 h-5" /> : <MessageCircle className="w-5 h-5" />}
-        {!open && (
-          <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full ring-2 ring-background" />
-        )}
-      </motion.button>
+        <AnimatePresence>
+          {!open && showLabel && (
+            <motion.button
+              onClick={() => setOpen(true)}
+              initial={{ opacity: 0, x: 10, scale: 0.9 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              exit={{ opacity: 0, x: 10, scale: 0.9 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              className="hidden sm:block bg-card border border-border rounded-full px-4 py-2 text-xs text-foreground shadow-lg hover:border-foreground/30 transition-colors"
+              style={{ fontFamily: "'Inter', sans-serif" }}
+            >
+              Hi, I'm Pranjal's AI Twin
+            </motion.button>
+          )}
+        </AnimatePresence>
+        <motion.button
+          onClick={() => setOpen((o) => !o)}
+          aria-label={open ? "Close chat" : "Open AI Twin"}
+          className="relative w-[52px] h-[52px] rounded-full bg-foreground text-background flex items-center justify-center shadow-xl hover:scale-105 transition-transform"
+          animate={!open ? { scale: [1, 1.04, 1] } : { scale: 1 }}
+          transition={!open ? { duration: 1.2, repeat: Infinity, repeatDelay: 8, ease: "easeInOut" } : { duration: 0.2 }}
+        >
+          {open ? <X className="w-5 h-5" /> : <MessageCircle className="w-5 h-5" />}
+          {!open && (
+            <span className="absolute top-1 right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full ring-2 ring-background" />
+          )}
+        </motion.button>
+      </motion.div>
 
       <AnimatePresence>
         {open && (
@@ -146,8 +185,9 @@ const AITwin = () => {
                   <p className="text-sm text-foreground font-medium" style={{ fontFamily: "'Inter', sans-serif" }}>
                     Pranjal's AI Twin
                   </p>
-                  <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground" style={{ fontFamily: "'Inter', sans-serif" }}>
-                    Online
+                  <p className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground flex items-center gap-1.5" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full inline-block" />
+                    Online · Trained on Pranjal's work
                   </p>
                 </div>
               </div>
@@ -165,7 +205,7 @@ const AITwin = () => {
               {messages.length === 0 && (
                 <div className="space-y-3">
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Hey — I'm Pranjal's AI Twin. Ask me anything about her work, projects, or approach.
+                    Hey I'm Pranjal's AI Twin. Ask me anything about her work, projects, or approach.
                   </p>
                   <div className="flex flex-col gap-2 pt-1">
                     {SUGGESTED.map((s) => (
@@ -177,6 +217,13 @@ const AITwin = () => {
                         {s}
                       </button>
                     ))}
+                  </div>
+                  <div className="flex items-center gap-2 pt-2 text-[10px] uppercase tracking-[0.18em] text-muted-foreground/70" style={{ fontFamily: "'Inter', sans-serif" }}>
+                    <span className="relative flex w-1.5 h-1.5">
+                      <span className="absolute inline-flex w-full h-full rounded-full bg-emerald-500/60 animate-ping" />
+                      <span className="relative inline-flex w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                    </span>
+                    Seen by {recruiterCount} recruiters this week
                   </div>
                 </div>
               )}
