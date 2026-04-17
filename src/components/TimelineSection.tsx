@@ -13,7 +13,7 @@ const timeline: Entry[] = [
   {
     period: "Dec 2025 - May 2026",
     company: "Morgan Stanley",
-    companySuffix: "(Contract via Hays Specialist Recruitment Private Limited)",
+    companySuffix: "(Contract via Hays)",
     role: "Consultant, PMO & Automation",
     description:
       "Managing space strategy for 9,000+ employees across Mumbai & Bengaluru, building real-time dashboards for global leadership, and engineering automated workflows that cut operational friction at scale.",
